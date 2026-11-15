@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PassForge — Password Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>PassForge</h1>
+    <p class="tagline">Generate strong passwords in one click</p>
+
+    <div class="output-box">
+      <input type="text" id="password" readonly placeholder="Your password will appear here" />
+      <button id="copy-btn" title="Copy">Copy</button>
+    </div>
+
+    <div class="strength" id="strength-label">Strength: —</div>
+
+    <div class="option">
+      <label for="length">Length: <span id="length-value">16</span></label>
+      <input type="range" id="length" min="6" max="32" value="16" />
+    </div>
+
+    <div class="checkboxes">
+      <label><input type="checkbox" id="upper" checked /> Uppercase (A-Z)</label>
+      <label><input type="checkbox" id="lower" checked /> Lowercase (a-z)</label>
+      <label><input type="checkbox" id="numbers" checked /> Numbers (0-9)</label>
+      <label><input type="checkbox" id="symbols" checked /> Symbols (!@#$...)</label>
+    </div>
+
+    <button id="generate" class="primary">Generate Password</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
